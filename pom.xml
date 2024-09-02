@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ovsit</groupId>
-	<artifactId>spring-boot-practice</artifactId>
+	<artifactId>spring-boot-sample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-practice</name>
+	<name>spring-boot-sample</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
