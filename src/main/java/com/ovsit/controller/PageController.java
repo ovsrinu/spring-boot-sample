@@ -14,4 +14,10 @@ public class PageController {
 		model.addAttribute("message", "Hello from AWS EC2");
 		return "Index";
 	}
+	
+	@GetMapping("/about")
+	public String about(Model model) {
+		model.addAttribute("message", "This has been deployed to AWS ECS");
+		return "Index";
+	}
 }
