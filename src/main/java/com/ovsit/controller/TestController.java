@@ -1,5 +1,8 @@
 package com.ovsit.controller;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 	@GetMapping("/home")
 	public String sayHello() {
-		return "Hello from Spring Boot Sample API";
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		LocalDateTime now = LocalDateTime.now();
+		return "Hello from Spring Boot Sample API " + now;
 	}
 }
