@@ -1,10 +1,112 @@
-<html>
-	<head>
-		Index
-	</head>
-	<body>
-		<p th:text="${message}">
-			
-		</p>
-	</body>
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='utf-8'>
+	<title>OVS IT</title>
+	<style type='text/css'>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		#main {
+			background: #888;
+			height: 100%;
+			padding: 60px 0 40px;
+			box-sizing: border-box;
+		}
+
+		#head {
+			position: absolute;
+			width: 100%;
+			height: 60px;
+		}
+
+		#left {
+			background: #ccc;
+			float: left;
+			width: 250px;
+			height: 100%;
+			overflow: scroll;
+			font-size: 20px;
+		}
+
+		#right {
+			background: #fff;
+			height: 100%;
+			overflow: scroll;
+		}
+
+		#foot {
+			background: teal;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 40px;
+		}
+	</style>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id='head' class="bg-primary text-white pt-3">
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col text-center">
+				<h6>Springboot Web Application</h6>
+			</div>
+			<div class="col-1 text-end me-2">
+				<h6>Welcome, Ozili</h6>
+			</div>
+		</div>
+	</div>
+	<div id='main'>
+		<div id='left'>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> HTML </h6>
+			</div>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> CSS </h6>
+			</div>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> Bootstrap </h6>
+			</div>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> React </h6>
+			</div>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> Angular </h6>
+			</div>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> Java </h6>
+			</div>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> Spring </h6>
+			</div>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> Spring Boot </h6>
+			</div>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> Spring Security </h6>
+			</div>
+			<div class="accordion-item">
+				<h6 class="accordion-header p-3" tabindex="0"><i class="fas fa-desktop"></i> Spring Data </h6>
+			</div>
+		</div>
+		<div id='right' th:text="${message}"></div>
+	</div>
+	<div id='foot' class="text-center text-white pt-2">@2024 OVS IT, Inc, All right reserved</div>
+</body>
+
 </html>
