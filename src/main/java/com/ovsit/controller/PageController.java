@@ -1,5 +1,8 @@
 package com.ovsit.controller;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,13 +14,17 @@ public class PageController {
 
 	@GetMapping("/home")
 	public String index(Model model) {
-		model.addAttribute("message", "Hello from AWS EC2");
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		LocalDateTime now = LocalDateTime.now();
+		model.addAttribute("message", "Hello from AWS EC2 on " + now);
 		return "Index";
 	}
-	
+
 	@GetMapping("/about")
 	public String about(Model model) {
-		model.addAttribute("message", "This has been deployed to AWS ECS");
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		LocalDateTime now = LocalDateTime.now();
+		model.addAttribute("message", "Hello from AWS EC2 on " + now);
 		return "Index";
 	}
 }
